@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int Temp, x, y;
+    cout<<"Geben Sie ein Nummer : ";
+    cin>>x;
+    int nums [x+1]={0};
+    y=x-1;
+    nums[y] = 1;
+    for( int i=0; i<x; i++){
+        cout<<"\n";
+      
+        for( int j=0; j<=i; j++){
+            Temp = nums[y+j] + nums[y+j+1];
+            cout<<Temp;
+            nums[y+j] = Temp;
+        }
+        y--;
+    }
+    return 0;
+}
