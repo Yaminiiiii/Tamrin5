@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main() {
+    char Satz[100];
+    int i=1;
+    cout << "Schreiben Sie ein Satz: ";
+    gets(Satz);
+    for (int j = 0; Satz[j] != NULL; ++j)
+        if (Satz[j] == ' ' || Satz[j] == '\n' || Satz[j] == '\t')
+            i++;
+    cout << "Nummer von Wort ist: "<< i;
+    return 0;
+}
